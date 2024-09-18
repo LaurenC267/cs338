@@ -1,0 +1,74 @@
+Level zero:
+Type in password: bandit0
+
+Level one:
+-ls
+-cat readme
+-password: ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+-ssh -p 2220 bandit1@bandit.labs.overthewire.org
+-enter passwor 
+
+Level two:
+-ls 
+-cat ./-
+-password: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx
+
+Level three:
+-ls
+-cat “spaces in this filename”
+-password: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
+
+Level four:
+-ls
+-cd inhere
+-ls -a
+-cat …Hiding-From-You
+-password: 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
+
+Level five 
+-ls
+-cd inhere
+-ls -a
+-cat ./-file07
+-password: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+
+Level six:
+-ls 
+-cd inhere
+-ls -a 
+- cd maybehere07 (I just went one by one idk a better method)
+- ls -a -l 
+- cat ./.file2
+-Password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
+
+Level seven:
+-find / -type f -user bandit7 -group bandit6 -size 33c
+-found only string that didn’t deny access 
+-cat /var/lib/dpkg/info/bandit7.password
+-password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
+
+Level eight:
+-ls
+-grep “millionth” data.txt
+Password: dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+
+Level nine: 
+-sort data.txt | uniq -u
+Password: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+
+Level 10:
+-strings data.txt 
+-look for password in result
+-password: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+Level 11:
+-base64 -d data.txt
+-password: dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr
+
+Level 12:
+-cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+-password: 7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4
+
+
+
+
