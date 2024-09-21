@@ -1,0 +1,34 @@
+Lauren Caldwell
+
+--- Daytime Questions ---
+1: 
+1  0.000000000   192.168.64.2    129.6.15.26   TPC    74    51816 -> 13 [SYN]
+2  0.035420841   129.6.15.26     192.166.64.2  TPC    66 13 -> 51816 [SYN, ACK]
+3  0.035477299   192.168.64.2    129.6.15.26   TPC    54    51816 -> 13 [ACK]
+
+2: 13
+
+3: The client needs a port to tell the server which server on the clients side to use to do the request that the client is demanding 
+
+4: 
+Frame four: 4 0.070141554 129.6.15.26    192.168.64.2    DAYTIME    105 DAYTIME Response 
+
+5: [SYN] is the client/ server asking for a connection and [ACK] is the client/server acknowedging the connection
+
+6: The daytime server was the one that initiated the server closing you can tell by the source IP address being from the server 
+and it being the first one to use [FIN]
+
+--- HTTP ---
+1: two, there are two TCP handhakes therefore two TCP connections were opened
+
+2: packet 4 is where the homepage was requested 
+4  0.022683680   192.168.64.2   172.233.221.124   HTTP   489 GET  /index.html HTTP/1.1
+
+3: It was requested in packet 9
+9   0.055861986   192.168.64.2   172.233.221.124   HTTP   451 GET  /jeff-square-colorado.jpg  HTTP/1.1
+
+--- Questions ---
+This isn't too related but can you use an IP address to see the actual real life location of where the server is running from?
+
+What is [PSH]?
+
