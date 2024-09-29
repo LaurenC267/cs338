@@ -1,0 +1,53 @@
+Lauren Caldwell
+Being Eve
+
+--Diffie Hellman--
+
+The equasion Alice needs to decode for the shared secret is B**x % p
+The equation Bob needs to decode for the shared secret is A**y %p
+
+To do this we need to figire out how Alice got A and how Bob got Bo
+They used the equations A=g**x %p and B=g**y %p
+
+We can use this equation to figure out the values of x and y since we know what A, B, g, and p
+
+-53 = 7**x % 97
+-82 = 7**y % 97
+
+-x = 22
+-y = 41
+
+We can now put the values into the equations to decode the shared secret
+
+-82**22 % 97
+-53**41 % 97
+
+-Shared secret = 65
+
+--RSA--
+I couldn't figure this one out but I will walk through what I did
+
+The public key Bob provides is (e, n)
+so bobs e = 13 and his n = 16299
+
+you get n by multiplying two prime numbers together p and q
+
+n only has two factors, one being 389 * 419 , these are the only factors that are both prime numbers
+thus I assumed p was 389 and q was 419.
+
+now knowing p and q I could find the lcm of p-1 and q-1
+lcm(388, 418) = 81092
+
+That number can then be used to find int d which is used in bobs private ordered pair and is used to decrypt alices message
+
+the equation is e*d%lcm = 1
+
+so filling that in it's: 
+13*d%81092 =1 
+
+This is where I got stuck as I have no idea how to do that calculation and couldn't find any online calculator that would do it either
+
+but essentially you would use this d to then take each segment of Alices ciphertext (y)
+and preform the equation: y**d**n 
+
+and you would then get the dectypted message 
