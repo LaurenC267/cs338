@@ -1,0 +1,28 @@
+Lauren Caldwell
+
+1- AES - use diffie hellman to get the key first though.
+since no AITM you can securly use diffie-hellman to agreee on a key and then use AES to safly convert message to ciphertext and 
+then Bob can securly decipher the message.
+
+2- generate random key and do H(M) and send it to bBob and Alice can encrypt it with her private key and bobs public key
+Alice can encrypt the message using her own private key and then Bob can decrypt the message using Alices public key along with his private key
+Therefore mal can't change the message without Bob ditecting the change
+
+3- first- diffie-hellman key exchange. Second - key exchanges. Third - AES 
+first they would use diffie-hellman to get an agreed apon secret key, then Bob would ask for Alice to prove herself using an AES ecryption with the key and a random number
+that encryption is given to Alice and she can then decrypt it using her secret key pair. If the decrypted number and Bob's orginal random number match
+then Alices identity has been varified as only she can decrypt the random number using her sercret key
+
+4- Document got modified - you would have to modify the document and the signature so low possibility 
+somebody stole Alics private key - That would make it easy for them to immitate Alice but also would mean alice was very insecure with her key
+Alice may have sent the wrong contract on accident 
+
+5- Sig_CA = E(S_CA, H(M))
+
+6- Bob can give Alice M and his signature (M || signature) so that it equals E(s_B, H(M))-- Alice can then compute the H(M) using bobs public key and his signature and then can verify that
+Bob is legit 
+
+7- Mal could get ahold of bobs private key and thus impersinate him and provide a signature that looks like its from bob since it would use his private key
+but would actually not been
+
+Mal could somehow get the CA's private key and thus create her own certificate as Bob
